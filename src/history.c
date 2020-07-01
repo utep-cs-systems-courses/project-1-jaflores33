@@ -42,6 +42,13 @@ char *get_history(List *list, int id){
   return p->str;
 }
 
-//void print_history(List *list){}
+void print_history(List *list){
+  Item * p = list->root;
+
+  while(p != NULL){
+    printf("\n> %s", p->str);
+    p=p->next;
+  }
+}
 
 //void free_history(List *list){}
